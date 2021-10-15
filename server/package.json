@@ -4,8 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "\"Group 11 and 12 CS-19 Sec-A\"",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "msnodesqlv8": "^2.4.0",
+    "mssql": "^7.2.1",
+    "nodemon": "^2.0.13"
+  }
 }
