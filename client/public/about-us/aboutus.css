@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #FFCC00;
+    --dark: #1D1D1D;
+    --ternary: #303030;
+    --secondary: #999999;
+    --light: #F2F2F2;
+    --pure: #FFFFFF;
+}
+
+body {
+    background: var(--ternary);
+}
+
+.parent {
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.L-R {
+    display: flex;
+}
+
+.title .head {
+    color: var(--pure);
+    font-family: 'Noto Serif';
+    font-size: 50px;
+    margin-left: 25px;
+    margin-top: 30px;
+    position: relative;
+    left: 20px;
+}
+
+.about_us .left {
+    width: 80%;
+    font-family: Segoe UI;
+    font-size: 20px;
+    margin-left: 20px;
+    left: -20px;
+    top: 20px;
+    padding: 10px;
+    color: var(--pure);
+    position: relative;
+    left: 20px;
+    text-justify: auto
+}
+
+.quote {
+    position: relative;
+    top: -100px;
+    width: 150%;
+    height: 450px;
+    margin: 100px 100px 20px 20px;
+}
+
+.quotation {
+    position: relative;
+    font-weight: 600;
+    color: #000000;
+    opacity: 35%;
+    font-size: 200px;
+    font-family: Futura;
+    margin-top: -40px;
+    margin-bottom: -180px;
+    left: 20px;
+}
+
+.quote .right {
+    width: 100%;
+    padding: 0px;
+    font-family: Segoe UI;
+    font-size: 60px;
+    text-align: center;
+    color: var(--secondary);
+}
