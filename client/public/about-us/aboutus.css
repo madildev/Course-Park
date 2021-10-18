@@ -84,3 +84,69 @@ body {
     text-align: center;
     color: var(--secondary);
 }
+
+@media (max-width:1920px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (max-width:1219px) {
+    .title .head {
+        font-size: 37px;
+    }
+    .about_us .left {
+        font-size: 19px;
+        width: 75%;
+    }
+    .quotation {
+        font-size: 170px;
+        top: -30px;
+        left: -10px;
+    }
+    .quote .right {
+        width: 200px;
+        font-size: 45px;
+    }
+}
+
+@media (max-width:1024px) {
+    .title .head {
+        font-size: 35px;
+    }
+    .about_us .left {
+        font-size: 18px;
+        width: 75%;
+    }
+    .quotation {
+        font-size: 170px;
+        top: -20px;
+        left: -10px;
+    }
+    .quote .right {
+        width: 200px;
+        font-size: 45px;
+    }
+}
+
+@media (max-width:786px) {
+    .title .head {
+        font-size: 30px;
+    }
+    .about_us .left {
+        font-size: 16px;
+        width: 80%;
+    }
+    .quote {
+        top: 20px;
+    }
+    .quotation {
+        font-size: 150px;
+        top: -30px;
+        left: -10px;
+    }
+    .quote .right {
+        width: 200px;
+        font-size: 40px;
+    }
+}
