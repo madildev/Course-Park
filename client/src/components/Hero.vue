@@ -83,7 +83,29 @@
 
     <!-- Here the section of memes will be added-->
     <section class="Attraction">
+       <div class="main-body">
+          
+          <div class="left-meme">
+              <img src="../assets/Meme.png" alt="">
+          </div>
+         
+          <div class="right-quote">
+              <div class="upper-quote">
+                <p>EVERY <span>STUDENT</span></p>
+                <p>DESERVES</p>
+                <p>TO PASS THEIR</p>
+                <p><span>SEMESTER</span></p>
+              </div>
+              
+              <div class="lower-quote">
+                <p>We are willing to help you out,</p>
+                <p>to make sure of no obstacle between</p>
+                <p>you and your next semester</p>
+              </div>
 
+          </div>
+         
+       </div>
     </section>
 
   </div>
@@ -314,4 +336,71 @@ export default {
   text-align: left;
 }
 
+
+/* This is the Css fro the Attraction or Meme Section */
+
+.Attraction{
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background: url("../assets/AttractionBackground.png");
+  background-size: cover;
+  align-items: center;
+  overflow: hidden;
+}
+.Attraction .main-body{
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px 20px;
+}
+.left-meme 
+{
+  width: 40%;
+
+}
+.left-meme img{
+  
+  height: 100%;
+  width: 100%;
+
+}
+.right-quote 
+{
+  /* This Css for the background adjustment */
+  width: 50%;
+  background: url('../assets/QuoteBackground.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+
+  /* This is for the Quotes in the section*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.upper-quote {
+  font-family: Segoe UI;
+}
+.upper-quote p{
+ font-size: 65px;
+ color: var(--primary);
+}
+.upper-quote span{
+  color: var(--ternary);
+}
+.lower-quote{
+  padding: 15px 0;
+  font-family: Segoe UI;
+}
+.lower-quote p{
+  color: var(--secondary);
+  font-size: 30px;
+}
+
 </style>
+
