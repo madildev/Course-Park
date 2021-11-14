@@ -9,8 +9,12 @@
           <p class="line-three">Learning Platform</p>
         </div>
 
-        <div class="btn">
-          <router-link to="/">Join Us</router-link>
+        <div class="welcome-text" v-if="isLogin">
+          <p>Welcome Muhammad Adil</p>
+        </div>        
+
+        <div class="btn" v-if="!(isLogin)">
+          <router-link to="/login">Join Us</router-link>
         </div>
       </div>
 
@@ -139,6 +143,11 @@ export default {
       ],
     };
   },
+  computed:{
+    isLogin() {
+      return this.$store.state.isLogin;
+    }
+  }
 };
 </script>
 
@@ -173,6 +182,12 @@ export default {
 .main-text .line-three {
   font-size: 40px;
   color: var(--primary);
+}
+.welcome-text{
+  font-size: 26px;
+  padding: 20px 0;
+  color: var(--secondary);
+
 }
 .btn {
   margin: 30px 0;
@@ -358,7 +373,7 @@ export default {
 }
 .left-meme 
 {
-  width: 40%;
+  width: 35%;
 
 }
 .left-meme img{

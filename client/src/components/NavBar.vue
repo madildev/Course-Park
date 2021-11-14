@@ -12,18 +12,23 @@
         </div>
       </div>
 
-      <div class="other-links">
-        <img src="" alt="" />
-
-        <router-link to="/">Login</router-link>
-        <router-link to="/">Sign Up</router-link>
+      <div class="other-links" v-if=" !(isLogin)">
+        <router-link to="/login">Login</router-link>
+        <router-link to="/signup">Sign Up</router-link>
       </div>
+
+      <div class="other-links" v-if="isLogin">
+        <p @click="SignOut">Sign Out</p>
+      </div>
+
     </div>
 
     <div class="navlinks">
       <ul>
         <li> <router-link to="/"><i class="fas fa-home"></i> Home</router-link> </li>
         <li> <router-link to="/about"><i class="fas fa-user-alt"></i>  About Us</router-link></li>
+        <li v-if="isLogin"> <router-link to="/about"><i class="fas fa-book-open"></i> Learning</router-link></li>
+        <li v-if="isLogin"> <router-link to="/"><i class="far fa-comments"></i> Discussion</router-link></li>
         <li @click="goTo('contact-us')"> <i class="fas fa-phone-alt"></i> Contact Us</li>
       </ul>
     </div>
@@ -33,11 +38,24 @@
 <script>
 export default {
    name: "NavBar",
+   data(){
+      return{
+
+      }
+   },
    methods:{
      goTo(id){
        document.getElementById(id).scrollIntoView({
         behavior: "smooth"
       });
+     },
+     SignOut(){
+       this.$store.dispatch('UserSignOut');
+     }
+   },
+   computed: {
+     isLogin() {
+       return this.$store.state.isLogin;    //This will check the status of the login
      }
    }
 };
@@ -66,16 +84,18 @@ export default {
   font-size: 18px;
 }
 
-.other-links a {
+.other-links a, .other-links p {
   text-decoration: none;
   color: white;
   margin: 10px;
   transition: 0.4s;
   font-size: 20px;
+  cursor: pointer;
 }
-.other-links a:hover {
+.other-links a:hover, .other-links p:hover {
   color: #ffcc00;
 }
+
 .navlinks {
   background-color: #232222;
   width: 100%;

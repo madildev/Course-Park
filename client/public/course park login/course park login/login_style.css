@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+*{
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    transition: .5s;
+}
+
+/* the whole page main */
+.modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .6);
+    display: none;
+}
+
+/* main page */
+
+.modal-content {
+    background:  white;
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2),
+                0 7px 20px 0 rgba(0, 0, 0, .2);
+
+    position: relative;
+    border-radius: 3px;
+    min-height: 500px ; 
+}
+.close-btn{
+    position: absolute;
+    top:2%;
+    right: 3%;
+    font-size: 1.5rem;
+    z-index: 1;
+    color:white;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+    color: red;
+    transition: .2s ease-out;
+}
+
+.modal-content-left{
+    background: linear-gradient(90deg,rgba(0,0,0,.5) 0%, rgba(0,0,0,0.5) 100% ); 
+    border-radius:  3px 0 0 3px;
+    position : relative;
+} 
+
+
+
+#modal-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    background: white;
+    
+}
+
+.modal-content-right{
+    border-radius: 0 3px 3px 0;
+    position : relative;
+    background-color: #707070;
+   opacity: 93%;
+   
+}
+
+
+.modal-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-form h1{
+    font-size: 1.3rem;
+    text-align: start;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: white;
+    /* for moveing left right */
+   }
+
+.icon{
+    color: white;
+    font-size: .8rem;
+}
+
+.fas{
+    padding-right: 4px;
+}
+
+.form-validation{
+    margin-bottom: .5rem;
+    width: 80%;
+}
+
+.form-validation.error{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-validation.valid{
+    margin-bottom: .5rem;
+    position: relative;
+}
+
+.form-validation p{
+    font-size: .7rem;
+    margin-top: .5rem;
+    color:red;
+    position: absolute;
+    top:2.4rem;
+    display: none;
+    font-weight: bold;
+}
+
+.form-validation.error p{
+    display: block;
+}
+
+.modal-input{
+    display: block;
+    padding-left: .5rem;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    height: 1.6rem;
+    width: 100%;
+    box-shadow: 1px  1px 1px rgba(0,0,0,.05);
+}
+
+.modal-input::placeholder{
+    color: #b1b1b1;
+}
+
+.modal-input-btn{
+    width: 85px;
+    height: 1.7rem;
+    background-color: #FFCC00 ;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
+.modal-input-btn:hover{
+    cursor: pointer;
+    background-color: #002D62 ;
+    color: white;
+    transition: all .4s ease-out;
+}
+.modal-input-login{
+    font-size: .8rem;
+    margin-top: 1rem;
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+.modal-input-login a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* .googleSign-btn
+{
+
+    background: url(goole.jpg);
+    background-repeat: no-repeat;
+    position: left;
+    padding-left: 20px;
+}
+#googleSign{
+    text-align: center;
+    background-color: white;
+} */
+
+.line1{
+    width: 80%;
+    height: 2px;
+    background: #bebbbb; 
+    margin-top: 40px;
+    align-items: center;
+}
+.line2{
+    width: 80%;
+    height: 2px;
+    background: #bebbbb;
+    align-items: center;  
+    margin-top: 40px;
+}
+
+.line p{
+    color: #bebbbb;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.line{
+    width: 80%;
+    display: grid;
+    
+    /* keeping in left right  mid positions */
+    grid-template-columns: 1fr .1fr 1fr;
+    grid-gap: 1px;
+    justify-items: center;    
+}
+.forgetPass{
+text-decoration: none;
+color: white;
+font-size: .8rem;
+margin-bottom: 5px;
+}
+
+@media screen and (max-width : 760px){
+    .modal-content-left{
+        display: none;
+    }
+    .modal-content{
+        grid-template-columns: auto;
+        margin: 15% auto;
+        width: 70%;
+        height: 75%;
+    }
+}
+
+@media  screen and (max-width:500px) {
+    .modal-content{
+        margin: 20% auto;
+        width: 90%;
+        height: 80%;
+    }
+}
