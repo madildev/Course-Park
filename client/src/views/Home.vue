@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-     <Hero/>
+    <NavBar></NavBar>
+     <router-view />
+    <Contact></Contact>
+    <Footer></Footer>
   </div>
 
 </template>
 
 <script>
 
-import Hero from "../components/Hero.vue";
+import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
+import Contact from "../components/Contact.vue";
 export default {
   name: "Home",
-  components:{
-    Hero,
-  }
+  components: {
+    NavBar,
+    Footer,
+    Contact
+  },
 
 }
 </script>
