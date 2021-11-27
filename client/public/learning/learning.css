@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.section1 {
+    position: relative;
+    padding: none;
+    display: block;
+    align-items: center;
+}
+
+.section1 h1 {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    font-size: 50px;
+    color: rgb(247, 247, 247);
+    top: 50%;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.section1 .imgTop {
+    border: none;
+    margin: none;
+    padding: none;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    width: 100%;
+    background: black;
+}
+
+.section1 .imgTop img {
+    opacity: 0.2;
+    filter: hue-rotate(45deg);
+    margin: -90px -15px 0 -100px;
+}
+
+.BD-1 {
+    display: inline-block;
+    padding: 10px 5px 0 10px;
+    margin-left: 15px;
+    color: #999999;
+}
+
+#link {
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+.section2 {
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 .content {
+    display: inline-block;
+    margin: 10px;
+    justify-content: center;
+}
+
+.section2 .content .imgBx {
+    border: none;
+    overflow: hidden;
+    height: 130px;
+    width: 250px;
+}
+
+.section2 .content .imgBx img {
+    width: 100%;
+}
+
+
+/* .section2 .card .content .icon i {
+color: rgb(0, 3, 5);
+margin: -300px;
+align-items: center;
+}
+
+.section2 .card .content .depName {
+text-align: center;
+font-size: 150px;
+opacity: 100%;
+color: rgb(255, 255, 255);
+text-decoration: solid;
+}
+
+
+
+.section2 .card .content .imgBx img {
+opacity: 0.4;
+}
+
+.section2 .card2 .content .imgBx {
+position: absolute;
+border: none;
+border-radius: 100px;
+overflow: hidden;
+background: rgb(229, 233, 2);
+}
+
+.section2 .card2 .content .imgBx img {
+opacity: 0.4;
+}
+
+.section2 .card3 .content .imgBx {
+position: absolute;
+border: none;
+border-radius: 100px;
+overflow: hidden;
+background: rgb(4, 83, 253);
+}
+
+.section2 .card3 .content .imgBx img {
+opacity: 0.4;
+} */
