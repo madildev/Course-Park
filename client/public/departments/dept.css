@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.newspaper {
+    column-count: 2;
+}
+
+.box-size {
+    display: grid;
+    margin: 20px;
+}
+
+.svg-logo {
+    width: 50px;
+    height: auto;
+    float: left;
+}
+
+.dept-name {
+    position: relative;
+    margin-top: 8px;
+    margin: 17px;
+    margin-bottom: 100px;
+    left: 20px;
+}
