@@ -26,7 +26,7 @@ body {
     margin-right: auto;
     position: absolute;
     font-size: 50px;
-    color: rgb(247, 247, 247);
+    color: rgb(255, 255, 255);
     top: 50%;
     margin: 0;
     left: 50%;
@@ -42,7 +42,7 @@ body {
     overflow: hidden;
     height: 250px;
     width: 100%;
-    background: black;
+    background: linear-gradient(to top, #1a1b1ae5, #421d7ece);
 }
 
 .section1 .imgTop img {
@@ -64,26 +64,122 @@ body {
 }
 
 .section2 {
-    margin: 30px;
-    justify-content: center;
-    align-items: center;
+    /* margin: 30px; */
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100 vh;
+    position: relative;
+    padding: 50px 0 50px 0;
 }
 
 .section2 .content {
     display: inline-block;
-    margin: 10px;
-    justify-content: center;
+    margin: 0;
+    bottom: 0;
+    max-width: 100%;
+    align-items: center;
+    align-content: space-between;
+    position: relative;
+    left: 12%;
 }
 
 .section2 .content .imgBx {
     border: none;
     overflow: hidden;
-    height: 130px;
-    width: 250px;
+    height: 150px;
+    width: 320px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
 }
 
 .section2 .content .imgBx img {
     width: 100%;
+}
+
+.section2 .content .card1 .imgBx {
+    border: none;
+    overflow: hidden;
+    background: rgb(27, 32, 51);
+}
+
+.section2 .content .card1 .imgBx img {
+    opacity: 0.4;
+}
+
+.section2 .content .card2 .imgBx {
+    border: none;
+    overflow: hidden;
+    background: rgb(36, 0, 0);
+}
+
+.section2 .content .card2 .imgBx img {
+    opacity: 0.2;
+}
+
+.section2 .content .card3 .imgBx {
+    border: none;
+    overflow: hidden;
+    background: rgb(94, 87, 0);
+}
+
+.section2 .content .card3 .imgBx img {
+    opacity: 0.2;
+}
+
+.section2 .content .icon-name .icon {
+    position: absolute;
+    color: white;
+    top: 30%;
+    left: 45%;
+    transform: scale(200%);
+}
+
+.section2 .content .icon-name .depName {
+    position: absolute;
+    align-items: center;
+    color: white;
+    top: 50%;
+    margin-left: 20%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 17px;
+}
+
+.section2 .content .icon-name {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section3 {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    right: 0;
+    margin: 0 auto;
+}
+
+.section3 .btn {
+    position: absolute;
+    bottom: 0;
+    border: none;
+    border-radius: 4px;
+    box-shadow: #3a3a3a;
+    padding: 6px 20px 6px 20px;
+    transition-duration: 0.4s;
+}
+
+.section3 .btn:hover {
+    background-color: #232325;
+    /* Green */
+    color: white;
 }
 
 
@@ -93,13 +189,7 @@ margin: -300px;
 align-items: center;
 }
 
-.section2 .card .content .depName {
-text-align: center;
-font-size: 150px;
-opacity: 100%;
-color: rgb(255, 255, 255);
-text-decoration: solid;
-}
+
 
 
 
