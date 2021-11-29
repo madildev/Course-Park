@@ -18,4 +18,3 @@ app.listen(port,()=>{
 app.get('/',(req,res)=>{
    res.send('Welcome To the Server');
 })
-
