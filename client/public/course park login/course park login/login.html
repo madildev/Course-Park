@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="login_style.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <button class="main-btn"><a href="#">Get Started></a></button>
+    
+    <!-- modal -->
+    
+    <!-- main div -->
+    <div class="modal" id="email-modal">
+        <!-- pages -->
+        <div class="modal-content">
+            <!-- the cross thingi -->
+            <span class="close-btn">&times;</span>
+            
+            <img id="modal-img" src="books2.jpg" alt="">
+
+            <div class="modal-content-left">
+                <form action="/" method="GET" class="modal-form" id="form">
+                    
+                    <h1>LOGIN</h1>
+                    
+                    <!-- username -->
+                    <div class="form-validation">
+                        <div class="icon"><i class="fas fa-user"></i>  User Name</div>
+                        <input type="text" class="modal-input" id="name" name="name" placeholder="Enter Username">
+                        <p>Error Message</p>
+                    </div>
+                   
+                    <!-- email -->
+                    <div class="form-validation">
+                        <div class="icon"><i class="fas fa-envelope"></i>  Email</div>
+                      
+                        <input type="email" class="modal-input" id="email" name="email" placeholder="Enter Email ID">
+                        <p>Error msg</p>
+                    </div>
+                    
+                    <!-- password -->
+                    <div class="form-validation">
+                        <div class="icon"><i class="fas fa-lock"></i>  Password</div>
+                        <input type="password" class="modal-input" id="password" name="password" placeholder="Enter Password">
+                        <p>Error msg</p>
+                    </div>
+
+                    <a class="forgetPass" href="#">Forget Password?</a>
+
+                    <input type="submit" class="modal-input-btn" value="Continue">
+                    
+                    <div class="line">
+                    <div class="line1"></div>
+                    <div><p> Or </p></div>
+                    <div class="line2"></div>
+                    </div>
+
+                    <!-- google sign up -->
+                  
+                    
+
+
+                    <span class="modal-input-login">Not Signed up? <a class="swap-btn-left" href="#">Create an Account</a> </span>
+                </form>
+            </div>
+            
+            <div class="modal-content-right">
+                <form action="/" method="GET" class="modal-form" id="form">
+                    
+                    <h1>Create Account</h1>
+                    
+                    <!-- username -->
+                    <div class="form-validation">
+                        <div class="icon"><i class="fas fa-user"></i>  User Name</div>
+                        <input type="text" class="modal-input" id="name" name="name" placeholder="Enter Username">
+                        <p>Error Message</p>
+                    </div>
+                   
+                    <!-- email -->
+                    <div class="form-validation">
+                        <div class="icon"><i class="fas fa-envelope"></i>  Email</div>
+                      
+                        <input type="email" class="modal-input" id="email" name="email" placeholder="Enter Email ID">
+                        <p>Error msg</p>
+                    </div>
+                    
+                    <!-- password -->
+                    <div class="form-validation">
+                        <div class="icon"><i class="fas fa-lock"></i>  Password</div>
+                      
+                        <input type="password" class="modal-input" id="password" name="password" placeholder="Enter Password">
+                        <p>Error msg</p>
+                    </div>
+                    
+                    <!-- confirm password -->
+                    <div class="form-validation">
+                        <div class="icon"><i class="fas fa-lock"></i>  Confirm Password</div>
+                      
+                        <input type="password" class="modal-input" id="password-confirm" name="password" placeholder="Confirm Password">
+                        <p>Error msg</p>
+                    </div>
+
+                    <input type="submit" class="modal-input-btn" value="Sign Up">
+                    
+                    <span class="modal-input-login">Already have an account? <a class="swap-btn-right" href="#">Login Here</a> </span>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="login-script.js"></script>
+</body>
+</html>
