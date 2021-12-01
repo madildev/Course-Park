@@ -62,7 +62,6 @@ export default {
 </script>
 
 <style scoped>
-
 .navbar-upper {
   background-color: var(--dark);
   display: flex;
@@ -129,3 +128,4 @@ export default {
 }
 
 </style>
+>>>>>>> c31c0ea71dfd9cd86e1973194002929d7c5913ab
