@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Product</title>
+
+</head>
+<style type="text/css">
+
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif; 
+		background-color: black;
+	}
+	.card{
+
+		color: white;
+
+	}
+	.box{
+		width: 1000px; 
+		position: absolute;
+		top: 28%;
+		left: 10%;
+		margin: auto;
+		border: 1px solid black;
+		text-align: center;
+		background-color: #003147;  		
+	}
+	label{
+		text-align: left;
+		display: inline-flex;
+	}
+	input{
+		border: 0;
+		background: none;
+		display: inline-flex;
+		border: 1px solid white;
+		margin: 10px;
+		text-align: center;
+		width: 250px;
+		color: white;
+		border-radius: 20px;
+		padding: 10px;
+	}
+	button{
+		width: 180px;
+		border: 0;
+		background: grey;
+		display: inline-block;
+		border: 1px solid black;
+		margin: 20px 0;
+		text-align: center;
+		border-radius: 10px;
+		color: black;
+		padding: 10px;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+
+</style>
+<body >
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card">
+					<form class="box" method="post" action="material.html">
+						<h1 class="text-black">Add video</h1>
+						<label class="">Name</label>
+						<input type="text" name="ID" placeholder="name">
+
+						<label class="">Department</label>
+						<input type="text" name="name" placeholder="department"><br>
+ 
+						<label class="">Video</label>
+						<input type="file" name="image" placeholder="video">
+
+
+						<label class="">Title</label>
+						<input type="text" name="category" placeholder="title"><br>
+
+						<a href="material.html"><button class="btn btn-info" type="submit" name="add">Add Video</button></a>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
