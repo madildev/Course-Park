@@ -60,6 +60,7 @@ export default {
    }
 };
 </script>
+<<<<<<< HEAD
 
 <style scoped>
 
@@ -71,6 +72,10 @@ export default {
 
 </style>
 =======
+=======
+
+<style scoped>
+>>>>>>> b12c2b31793ad5f05116975b4de81bff6d9fea09
 .navbar-upper {
   background-color: var(--dark);
   display: flex;
@@ -137,4 +142,8 @@ export default {
 }
 
 </style>
+<<<<<<< HEAD
 >>>>>>> a93530bd3682db76dd2ded8226de499ca6b18c82
+=======
+>>>>>>> c31c0ea71dfd9cd86e1973194002929d7c5913ab
+>>>>>>> b12c2b31793ad5f05116975b4de81bff6d9fea09
