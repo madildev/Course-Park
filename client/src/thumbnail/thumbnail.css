@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section1 {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 5%;
+}
+
+.section1 .header {
+    padding-top: -850px;
+    text-align: center;
+    font-size: 250px;
+    margin-top: -950px;
+    opacity: 100%;
+    color: aliceblue;
+    text-decoration: solid;
+}
+
+.section1 .imgTop {
+    z-index: -1;
+    border: none;
+    border-radius: 100px;
+    overflow: hidden;
+    background: black;
+}
+
+.section1 .imgTop img {
+    opacity: 0.2;
+}
+
+#input {
+    display: block;
+    position: relative;
+    padding: 20px 20px;
+    text-decoration: #ffffff;
+    background: #e7e6e6;
+    border: 3px solid #f1eeee;
+    border-radius: 60px;
+    text-align: center;
+    font-size: 1.2em;
+    left: 58%;
+    right: 10%;
+    margin-top: 8%;
+    width: 30%;
+    height: 30%;
+    font-size: 50px;
+    opacity: 80%;
+}
+
+#input:hover {
+    opacity: 100%;
+    display: block;
+    padding: 20px 25px;
+    width: 30%;
+    height: 30%;
+    background: #f3f1f1;
+    border: 2px solid #0f0f0f;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.section2 {
+    left: 30px;
+    margin-top: 80px;
+    font-size: 120px;
+    margin-left: 70px;
+    opacity: 90%;
+    color: rgb(29, 29, 29);
+    text-decoration: underline;
+    text-decoration-style: 2px solid;
+    text-decoration-color: #383838;
+}
+
+.card {
+    position: relative;
+    width: 1200px;
+    height: 1200px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 200px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    backdrop-filter: blur(10px);
+}
+
+.card .content .imgBx {
+    margin-top: 0%;
+    border: 1px solid #0f0f0f;
+}
+
+.card .content .contentBx {
+    margin-left: 5%;
+}
+
+.card .content .contentBx p {
+    color: #444444;
+    font-size: 40px;
+}
+
+.card .content .contentBx h1 {
+    color: #3d3d3d;
+    font-size: 100px;
+}
+
+.card .content .like {
+    margin-left: 5%;
+}
+
+.card .content .like i {
+    margin-top: 15px;
+    color: #444444;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+.card .content .like i:hover {
+    cursor: pointer;
+    color: rgb(252, 0, 0);
+}
+
+.card .content .like p {
+    margin-top: -7.5%;
+    margin-left: 10%;
+    color: #444444;
+    font-size: 70px;
+}
+
+.card .content .button {
+    background: transparent;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 40px;
+    font-size: 40px;
+    float: right;
+    margin-top: -7.5%;
+    margin-right: 5%;
+}
+
+.card .content .button:hover {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background: #444444;
+    color: #f1eeee;
+}
