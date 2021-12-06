@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoursePark</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="KEY.png">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="fontawesome-all.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<script>
+		$(document).ready(function(){
+			$("#sidebarCollapse").click(function(){
+				$("#sidebar").toggle();
+			});
+		});
+	</script>
+	<style type="text/css">
+		body{
+			font-family: 'poppins', sans-serif;
+			background-color:#e5e2e2;
+		}
+		a,
+		a:hover,
+		a:focus{
+			color: inherit;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+		h3{
+			margin-left: 10px;
+			color: white;
+			font-weight: bold;
+		}
+		p{
+			font-family: 'poppins', sans-serif;
+			font-size: 1.1em;
+			font-weight: 300;
+			line-height: 1.7em;
+			color: grey;
+		}
+		.wrapper{
+			display: flex;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+		#sidebar{
+			min-width: 250px;
+			max-width: 250px;
+			background-color: #003147;
+			color: white;
+			transition: all 0.3s;
+		}
+		#sidebar .active{
+			margin-left: -250px;
+		}
+		#sidebar .sidebar-header{
+			padding: 20px;
+			background: #003147;
+			display: inline-flex;
+		}
+		#sidebar .sidebar-header .img{
+			height: 100px;
+			width: 100px;
+		}
+		#sidebar ul.components{
+			padding: 20px 0;
+			
+		}
+		#sidebar ul p{
+			color: #fff;
+			padding: 10px;
+		}
+		#sidebar ul li a{
+			padding: 10px;
+			font-size: 1.1em;
+			display: block;
+		}
+		#sidebar ul li a:hover{
+			color: white;
+			background:#03a9f4	 ; 
+		}
+		#sidebar ul li.active>a,
+		a[aria-expanded="true"]{
+			color: #fff;
+			background: grey;
+		}
+		a[data-doggle="collapse"]{
+			position: relative;
+		}
+		.dropdown-toggle::after{
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 20%;
+			transform: translateY(-50%);
+		}
+		ul ul a{
+			font-size: 0.9em !important;
+			padding-left: 30px !important;
+			background: grey;
+		}
+		#content{
+			width: 100%;
+			padding: 20px;
+			min-height: 100vh;
+			transition: all 0.3s;
+		}
+	/*	#content .container-fluid .search{
+			width:100%;
+			height:40px;
+			border-radius: 40px;
+			padding: 5px 20px;
+			outline: none;
+			border: 1px soid rgba(0,0,0,00.2);
+		}*/
+		@media (max-width: 768px){
+			#sidebar{
+				margin-left: -250px;
+			}
+			#sidebar.active{
+				margin-left: 0px;
+			}
+			#sidebarCollapse span{
+				display: none;
+			}
+		}
+		#btn{
+			margin-left: 800px;
+		}
+		 
+		 .details
+		 {
+			 position:relative;
+			 width: 100%;
+			 padding: 20px;
+			 padding-top: 20px;
+			
+	  
+		 }
+
+		 .details .recentVideos{
+			 position: relative;
+			 display: grid;
+			 min-height: 530px;
+			 background: #fff;
+			 padding: 20px;
+		 }
+		 .cardHeader
+		 {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			 
+		 }
+		 .cardHeader h2{
+			 font-weight: 600;
+		 }
+		 .btn
+		 {
+			 position: relative;
+			 padding: 5px 10px ;
+			 background: #03a9f4;
+			 color: #fff;
+			 text-decoration: none;
+			 border-radius: 6px;
+
+		 }
+		 
+		 .details table{
+			 width: 100%;
+			 border-collapse: collapse;
+			 margin-top: 10px;
+
+		 }
+		 .details table thead td{
+			 font-weight: 600; 
+		 }
+		 .details .Subscribers
+		 {
+			 position: relative;
+			 display: grid;
+			 min-height: 530px;
+			 background:#fff;
+			 padding: 20px; 
+		 }
+		 .details .Subscribers .imgBx
+		 {
+			 position: relative;
+			 width: 40px;
+			 height: 40px;
+			 border-radius:50%;
+			 overflow: hidden;
+		 }
+		 .details .Subscribers table tr td h4 span{
+			 font-size: 14px;
+			 color:#999;
+		 }
+		 .details .Subscribers table tr:hover,
+		 .details .Subscribers table tr:hover td h4 span 
+		 {
+			background: #03a9f4;
+			color: #fff;
+
+		 }
+		 .details .Subscribers table tr td{
+			 padding: 7px 10px;
+		 }
+		 .details .Subscribers table tr td h4
+		 {
+			 font-size: 16px;
+			 font-weight: 500;
+			 line-height: 1.2em
+		 }
+		 @media (max-width: 992px)
+		 {
+			 .navigation
+			 {
+				 left: -300px
+			 }
+			 .navigation .active{
+				 left: 0;
+			 }
+			 
+		 }
+	</style>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<nav id="sidebar">
+			<div class="sidebar-header">
+			<!--	<img src="logo.png">-->
+				<h3>CoursePark || Admin</h3>
+				
+			</div>
+
+			<ul class="list-unstyled components">
+				
+				<li>
+					<a href="dash.html"></i>&nbsp;	&nbsp;	&nbsp;Dashboard</a>
+				</li>
+				<li>
+					<a href="material.html">	&nbsp;	&nbsp;	&nbsp;Main</a>
+				</li>
+				<li>
+					<a href="videos.html">	&nbsp;	&nbsp;	&nbsp;Videos</a>
+				</li>
+				<li>
+					<a href="students.html">	&nbsp;	&nbsp;	&nbsp;Students</a>
+				</li>
+				<li>
+					<a href="">	&nbsp;	&nbsp;	&nbsp;Information</a><!--link the same page jo main site pe ha-->
+				</li>
+			</ul>
+		</nav>
+
+		 
+		<div id="content">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+				    <div class="button">	<button type="button" id="sidebarCollapse" class="btn bg-dark" >
+						<i class="fas fa-align-left"></i>	
+						
+					</button></div>
+					<!--<div class="search">
+						<label>
+							<input type="text" placeholder="Search here">
+						
+						</label>
+					</div>-->
+
+					<div class="button">
+						<button type="button" class="btn bg-dark" ><a href="login.html">
+							<i class="fas fa-sign-out-alt"></i>	
+							<span>Logout</span></a>
+						</button>
+					</div>
+				</div>
+			 	 
+			
+			 </nav>
+		 
+			<div class="details">
+				<div class="Subscribers">
+					<div class="cardHeader">
+						<h2>Students</h2>
+					</div>
+					<table>
+						<tbody>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr><tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+							<tr>
+								<td width="60px"><div class="imgBx"><i class="fas fa-user"></i></div></td>
+								<td><h4>Rehmat<br><span>Computer Science</span></h4></td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				 
+			</div>
+		 
+		</div>
+		 
+	 
+	</div>
+</body>
+</html>
