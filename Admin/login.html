@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	
+	<script type="text/javascript">
+		function validateform(){  
+			var password=document.getElementById("pass1").value;
+
+			if (password.length<4){
+
+				return false;
+			}
+			return true;
+			
+		} 
+	</script>
+
+</head>
+<style type="text/css">
+
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif; 
+		background-color: rgb(75, 74, 74);
+	}
+	.card{
+
+		color: white;
+
+	}
+	.box{
+		width: 500px;   
+		position: absolute;
+		top: 20%;
+		left: 35%;
+
+		border: 1px solid black;
+		text-align: center;
+		background-color: black;  
+	}
+	label{
+		text-align: left;
+		display: inline-block;
+	}
+	input{
+		border: 0;
+		background: none;
+		display: inline-block;
+		border: 1px solid white;
+		margin: 20px 0;
+		text-align: center;
+		width: 250px;
+		color: white;
+		border-radius: 20px;
+		padding: 10px;
+	}
+	button{
+		width: 100px;
+		border: 0;
+		background: #686868;
+		display: inline-block;
+		border: 1px solid black;
+		margin: 20px 0;
+		text-align: center;
+		border-radius: 10px;
+		color: black;
+		padding: 10px;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+
+</style>
+<body >
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card">
+					<form class="box" method="post" action="login.php">
+						<h1 class="text-black">Admin Login</h1>
+						<label class="">Username</label><br>
+						<input type="text" name="username" placeholder="Username"><br>
+
+						<label class="">Password</label><br>
+						<input type="password" name="password" placeholder="Password"><br>
+
+						<button type="button" class="btn bg-light" ><a href="material.html">
+						
+							<span>Login</span></a>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
