@@ -1,11 +1,22 @@
 <template>
+  
   <div class="signup">
     <div class="modal-content-right">
-      <form action="/" method="GET" class="modal-form" id="form">
+      <form class="modal-form" id="form" @submit.prevent="event.preventDefault">
         <h1>Create Account</h1>
 
+        <div class="form-validation" v-if="errors.length">
+          <p
+            v-for="(error, index) in errors"
+            :key="index"
+            class="form-validation"
+          >
+            {{ error }}
+          </p>
+        </div>
+
         <!-- username -->
-        <div class="form-validation">
+        <div class="form-validation" required>
           <div class="icon"><i class="fas fa-user"></i> User Name</div>
           <input
             type="text"
@@ -13,8 +24,8 @@
             id="name"
             name="name"
             placeholder="Enter Username"
+            v-model="info.name"
           />
-          <p>Error Message</p>
         </div>
 
         <!-- email -->
@@ -27,8 +38,30 @@
             id="email"
             name="email"
             placeholder="Enter Email ID"
+            required
+            v-model="info.email"
           />
-          <p>Error msg</p>
+        </div>
+
+        <!-- Departments -->
+
+        <div class="form-validation">
+          <div class="icon"><i class="fas fa-building"></i> Department</div>
+
+          <select
+            class="modal-input"
+            v-model="info.depart_id"
+            required
+          >
+            <option value="" disabled>Select your Department</option>
+            <option
+              v-for="(depart, index) in Departments"
+              :key="index"
+              :value="depart.id"
+            >
+              {{ depart.name }}
+            </option>
+          </select>
         </div>
 
         <!-- password -->
@@ -41,8 +74,9 @@
             id="password"
             name="password"
             placeholder="Enter Password"
+            required
+            v-model="info.password"
           />
-          <p>Error msg</p>
         </div>
 
         <!-- confirm password -->
@@ -55,11 +89,17 @@
             id="password-confirm"
             name="password"
             placeholder="Confirm Password"
+            required
+            v-model="info.confirmPassword"
           />
-          <p>Error msg</p>
         </div>
 
-        <input type="submit" class="modal-input-btn" value="Sign Up" />
+        <input
+          type="submit"
+          class="modal-input-btn"
+          value="Sign Up"
+          @click="SignUp"
+        />
 
         <span class="modal-input-login"
           >Already have an account?
@@ -67,14 +107,89 @@
         </span>
       </form>
     </div>
-
   </div>
 </template>
+
 
 <script>
 export default {
   name: "SignUp",
+  data() {
+    return {
+      info: {
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        roll_no: "",
+        depart_id: 0,
+      },
+      errors: [],
+    };
+  },
+  
+  methods: {
+    //Check the Email
+    checkEmail(email) {
+      if (email.includes("@student.uet.edu.pk")) {
+        return true;
+      } else {
+        this.errors.push("Enter Valid University Email!!");
+      }
+    },
+    //Check the Password
+    checkLength(input, min, max) {
+      if (input.length < min) {
+        this.errors.push(
+          `The password must be at least ${min} characters long`
+        );
+      } else if (input.length > max) {
+        this.errors.push(
+          `The password cannot be longer than ${max} characters`
+        );
+      } else {
+        return true;
+      }
+    },
+    //Matches the Password
+    passwordMatch(input1, input2) {
+      if (input1 !== input2) {
+        this.errors.push(`Passwords do not match!!`);
+      } else {
+        return true;
+      }
+    },
+    //class the signup fucntion
+    SignUp() {
+      this.errors = [];
+      if (
+        this.checkLength(this.info.password, 8, 25) &&
+        this.passwordMatch(this.info.password, this.info.confirmPassword) &&
+        this.checkEmail(this.info.email)
+      ) {
+        console.log("All The Data hass been validated!!");
+
+        this.$store.dispatch("UserSignUp", {
+          roll_no: this.info.roll_no,
+          username: this.info.name,
+          email: this.info.email,
+          password: this.info.password,
+          depart_id: this.info.depart_id,
+        });
+      }
+    },
+  },
+  computed: {
+    Departments() {
+        return this.$store.state.departments;
+      },
+    getRollNo() {
+      return this.info.roll_no = this.info.email.substr(0,this.info.email.indexOf("@"));
+    },
+  },
 };
+
+
 </script>
 
 <style scoped>
@@ -155,7 +270,6 @@ export default {
   color: red;
   position: absolute;
   top: 2.4rem;
-  display: none;
   font-weight: bold;
 }
 

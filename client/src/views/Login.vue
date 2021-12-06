@@ -4,24 +4,11 @@
     
     <div class="modal-content-left">
       <form
-        method="GET"
         class="modal-form"
         id="form"
+        @submit.prevent="event.preventDefault"
       >
         <h1>LOGIN</h1>
-
-        <!-- username -->
-        <div class="form-validation">
-          <div class="icon"><i class="fas fa-user"></i> User Name</div>
-          <input
-            type="text"
-            class="modal-input"
-            id="name"
-            name="name"
-            placeholder="Enter Username"
-          />
-          <p>Error Message</p>
-        </div>
 
         <!-- email -->
         <div class="form-validation">
@@ -33,6 +20,7 @@
             id="email"
             name="email"
             placeholder="Enter Email ID"
+            v-model="email"
           />
           <p>Error msg</p>
         </div>
@@ -46,6 +34,7 @@
             id="password"
             name="password"
             placeholder="Enter Password"
+            v-model="password"
           />
           <p>Error msg</p>
         </div>
@@ -75,18 +64,22 @@ export default {
     name: "Login",
     data(){
         return {
-
+            email: "",
+            password: "",
         }
     },
     methods:{
         login(){
-           this.$store.dispatch('UserLogin');
-           this.$router.replace("/");
+           this.$store.dispatch('UserLogin',{
+               email: this.email,
+               password: this.password
+           }); 
+           this.$router.replace('/');  
         }
     },
     computed:{
         isLogin(){
-            return this.$store.$store.isLogin
+            return this.$store.state.isLogin
         }
     } 
 };
