@@ -1,13 +1,14 @@
 <template>
   <div class="navbar">
     <div class="navbar-upper">
+      
       <div class="logo">
         <div class="first-part">
-          <h2>LOGO</h2>
+         <img src="../assets/logo_4.png" >  
         </div>
 
         <div class="second-part">
-          <p>UET Largest</p>
+          <p>UET's Largest</p>
           <p>Learning Platform</p>
         </div>
       </div>
@@ -28,10 +29,11 @@
         <li> <router-link to="/"><i class="fas fa-home"></i> Home</router-link> </li>
         <li> <router-link to="/about"><i class="fas fa-user-alt"></i>  About Us</router-link></li>
         <li v-if="isLogin"> <router-link to="/about"><i class="fas fa-book-open"></i> Learning</router-link></li>
-        <li v-if="isLogin"> <router-link to="/"><i class="far fa-comments"></i> Discussion</router-link></li>
+        <li v-if="isLogin"> <router-link to="/discussion"><i class="far fa-comments"></i> Discussion</router-link></li>
         <li @click="goTo('contact-us')"> <i class="fas fa-phone-alt"></i> Contact Us</li>
       </ul>
     </div>
+
   </div>
 </template>
 
@@ -62,40 +64,35 @@ export default {
 </script>
 
 <style scoped>
-
-<<<<<<< HEAD
-.navbar {
-
-}
-
-
-</style>
-=======
 .navbar-upper {
   background-color: var(--dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  align-self: center;
+  padding: 5px 0;
 }
 .logo {
   display: flex;
+  align-items: center;
 }
 .logo .first-part {
-  color: var(--primary);
   border-right: 2px solid var(--primary);
-  padding: 10px;
+}
+.first-part img{
+   height: 100px;
+   width: 100px;
 }
 .logo .second-part {
   color: white;
-  padding: 10px;
-  font-size: 18px;
+  padding: 0 10px;
+  font-size: 16px;
 }
 
 .other-links a, .other-links p {
   text-decoration: none;
   color: white;
-  margin: 10px;
+  margin: 0 10px;
   transition: 0.4s;
   font-size: 20px;
   cursor: pointer;
@@ -107,21 +104,18 @@ export default {
 .navlinks {
   background-color: #232222;
   width: 100%;
-  height: 50px;
+  height: 45px;
   text-align: center;
 }
 .navlinks ul {
   float: right;
-  margin: 0 10px;
 }
 .navlinks li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 10px;
   font-size: 20px;
   color: white;
   cursor: pointer;
-  padding: 10px;
- 
 }
 .navlinks li a{
    text-decoration: none;
@@ -137,4 +131,3 @@ export default {
 }
 
 </style>
->>>>>>> c31c0ea71dfd9cd86e1973194002929d7c5913ab
