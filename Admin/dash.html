@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CoursePark</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="KEY.png">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="fontawesome-all.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+	<script>
+		$(document).ready(function(){
+			$("#sidebarCollapse").click(function(){
+				$("#sidebar").toggle();
+			});
+		});
+	</script>
+	<style type="text/css">
+		body{
+			font-family: 'poppins', sans-serif;
+			background-color:#e5e2e2;
+		}
+		a,
+		a:hover,
+		a:focus{
+			color: inherit;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+		h3{
+			margin-left: 10px;
+			color: white;
+			font-weight: bold;
+		}
+		p{
+			font-family: 'poppins', sans-serif;
+			font-size: 1.1em;
+			font-weight: 300;
+			line-height: 1.7em;
+			color: grey;
+		}
+		.wrapper{
+			display: flex;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+		#sidebar{
+			min-width: 250px;
+			max-width: 250px;
+			background-color: #003147;
+			color: white;
+			transition: all 0.3s;
+		}
+		#sidebar .active{
+			margin-left: -250px;
+		}
+		#sidebar .sidebar-header{
+			padding: 20px;
+			background: #003147;
+			display: inline-flex;
+		}
+		#sidebar .sidebar-header .img{
+			height: 100px;
+			width: 100px;
+		}
+		#sidebar ul.components{
+			padding: 20px 0;
+			
+		}
+		#sidebar ul p{
+			color: #fff;
+			padding: 10px;
+		}
+		#sidebar ul li a{
+			padding: 10px;
+			font-size: 1.1em;
+			display: block;
+		}
+		#sidebar ul li a:hover{
+			color: white;
+			background:#03a9f4	 ; 
+		}
+		#sidebar ul li.active>a,
+		a[aria-expanded="true"]{
+			color: #fff;
+			background: grey;
+		}
+		a[data-doggle="collapse"]{
+			position: relative;
+		}
+		.dropdown-toggle::after{
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 20%;
+			transform: translateY(-50%);
+		}
+		ul ul a{
+			font-size: 0.9em !important;
+			padding-left: 30px !important;
+			background: grey;
+		}
+		#content{
+			width: 100%;
+			padding: 20px;
+			min-height: 100vh;
+			transition: all 0.3s;
+		}
+	/*	#content .container-fluid .search{
+			width:100%;
+			height:40px;
+			border-radius: 40px;
+			padding: 5px 20px;
+			outline: none;
+			border: 1px soid rgba(0,0,0,00.2);
+		}*/
+		@media (max-width: 768px){
+			#sidebar{
+				margin-left: -250px;
+			}
+			#sidebar.active{
+				margin-left: 0px;
+			}
+			#sidebarCollapse span{
+				display: none;
+			}
+		}
+		#btn{
+			margin-left: 800px;
+		}
+		
+		.cardBox
+		{
+			position: relative;
+			width: 100%;
+			padding: 20px;
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			grid-gap: 20px;
+
+		}
+		.cardBox .card{
+			position: relative;
+			background: #fff;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;
+			cursor: pointer;
+		}
+		.cardBox .card .numbers{
+		 	position: relative;
+			font-size: 2em;
+			font-weight: 500;
+			 
+		 }
+		 .cardBox .card .cardName
+		 {
+			 color: black
+		 }
+
+		
+		.welcome{
+			margin-left: 50px;
+			margin-top: 100px;
+			text-align: center;
+			font-family: 'Alfa Slab One', cursive;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<nav id="sidebar">
+			<div class="sidebar-header">
+			<!--	<img src="logo.png">-->
+				<h3>CoursePark || Admin</h3>
+				
+			</div>
+
+			<ul class="list-unstyled components">
+				
+				<li>
+					<a href="dash.html"></i>&nbsp;	&nbsp;	&nbsp;Dashboard</a>
+				</li>
+				<li>
+					<a href="material.html">	&nbsp;	&nbsp;	&nbsp;Main</a>
+				</li>
+				<li>
+					<a href="videos.html">	&nbsp;	&nbsp;	&nbsp;Videos</a>
+				</li>
+				<li>
+					<a href="students.html">	&nbsp;	&nbsp;	&nbsp;Students</a>
+				</li>
+				<li>
+					<a href="">	&nbsp;	&nbsp;	&nbsp;Information</a><!--link the same page jo main site pe ha-->
+				</li>
+			</ul>
+		</nav>
+
+		 
+		<div id="content">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+				    <div class="button">	<button type="button" id="sidebarCollapse" class="btn bg-light" >
+						<i class="fas fa-align-left"></i>	
+						
+					</button></div>
+					<!--<div class="search">
+						<label>
+							<input type="text" placeholder="Search here">
+						
+						</label>
+					</div>-->
+
+					<div class="button">
+						<button type="button" class="btn bg-light" ><a href="login.html">
+							<i class="fas fa-sign-out-alt"></i>	
+							<span>Logout</span></a>
+						</button>
+					</div>
+				</div>
+			 	 
+			
+			</nav>
+			<div class="cardBox">
+				<div class="card">
+					<div>
+						<div class="numbers">1,042</div>
+						<div class="cardName">Daly Views</div>
+	
+					</div>
+					 
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">40</div>
+						<div class="cardName">Daly Uploads</div>
+	
+					</div>
+					 
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">140</div>
+						<div class="cardName">Total Chats </div>
+	
+					</div>
+					 
+				</div>
+				<div class="card">
+					<div>
+						<div class="numbers">20609</div>
+						<div class="cardName">Total Students</div>
+	
+					</div>
+				 
+			   </div>
+		    </div>
+			<br><br>
+			<div class="welcome">
+				<h1>Welcome to "CoursePark" admin page</h1>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
