@@ -19,3 +19,7 @@ app.get('/',(req,res)=>{
    res.send('Welcome To the Server');
 })
 
+// app.post('',(req,res)=>{
+    
+// })
+
