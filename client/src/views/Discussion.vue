@@ -111,7 +111,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .discussion{
   height: 100vh;
   overflow: hidden;

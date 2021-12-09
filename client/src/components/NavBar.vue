@@ -28,7 +28,7 @@
       <ul>
         <li> <router-link to="/"><i class="fas fa-home"></i> Home</router-link> </li>
         <li> <router-link to="/about"><i class="fas fa-user-alt"></i>  About Us</router-link></li>
-        <li v-if="isLogin"> <router-link to="/about"><i class="fas fa-book-open"></i> Learning</router-link></li>
+        <li v-if="isLogin"> <router-link to="/learning"><i class="fas fa-book-open"></i> Learning</router-link></li>
         <li v-if="isLogin"> <router-link to="/discussion"><i class="far fa-comments"></i> Discussion</router-link></li>
         <li @click="goTo('contact-us')"> <i class="fas fa-phone-alt"></i> Contact Us</li>
       </ul>
