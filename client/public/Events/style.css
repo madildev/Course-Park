@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-image: url(bg.jpg);
+    background-size:cover;
+    font-family: 'Josefin Sans',sans-serif;
+}
+.wrapper{
+    margin-top: 5%;
+    
+   
+    
+
+}
+.wrapper h1{
+    font-family: 'Allura', cursive;
+    background-color: cornsilk;
+    border-radius: 30px;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 52px;
+    margin-bottom: 60px;
+    text-align: center;
+
+    
+ 
+}
+.events{
+
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content:center ;
+    
+    
+   
+}
+.events .society{
+    background-color: cornsilk;
+    background-size: cover;
+    margin:20px;
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    color: lightsalmon;
+    border-radius: 30px;
+    position: relative;
+
+
+    
+}
+.events .society h3{
+    color:darkorchid;
+    font-size: 26px;
+    margin-top:50px;
+}
+.events .society p.role{
+    color:rgb(168, 43, 206);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 12px 0;
+
+}
+.events .society .societylogo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -70px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:cornsilk ;
+    
+}
+
+.events .society .societylogo img{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+.events .society {
+    background-image:url();
+}
+@media screen and (max-width: 600px){
+.events{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper h1{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+}
+    
