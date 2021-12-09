@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+.header {
+    font-size: 100px;
+    font-style: inherit;
+    font-weight: 500;
+    margin-bottom: 1.5%;
+}
+
+.header span {
+    font-size: 70px;
+    font-style: oblique;
+    color: #444444;
+}
+
+.descContainer {
+    position: relative;
+    width: 1000px;
+    height: 1400px;
+    background: rgba(168, 167, 167, 0.37);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    float: right;
+    margin-right: 80em;
+    margin-top: -31%;
+}
+
+.descContainer .content {
+    padding: 40px 40px;
+    font-size: 50px;
+    margin-top: -40%;
+}
+
+.descContainer .content h2 {
+    font-size: 100px;
+}
+
+.descContainer .content p {
+    font-size: 50px;
+}
+
+.descContainer .content h3 {
+    font-size: 80px;
+    margin-top: 2s0px;
+}
+
+.descContainer .content a {
+    font-size: 60px;
+}
+
+.like i {
+    margin-top: 15px;
+    color: #444444;
+    font-size: 80px;
+    cursor: pointer;
+    margin-left: 42%;
+}
+
+.like i:hover {
+    cursor: pointer;
+    color: rgb(252, 0, 0);
+}
+
+.like p {
+    margin-left: 45%;
+    color: #444444;
+    font-size: 70px;
+    margin-top: -1.8%;
+}
+
+.video {
+    border: 2px solid rgba(253, 253, 253, 0);
+    border-radius: 50px;
+    overflow: hidden;
+}
