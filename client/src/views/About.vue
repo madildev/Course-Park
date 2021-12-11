@@ -38,19 +38,6 @@
 
 <script>
 
-<<<<<<< HEAD
-import NavBar from "@/components/NavBar.vue";
-
-export default{
-name:"about",
-components:{
-NavBar
-}
-}
-
-
-</script>
-=======
 export default {
   name: "about",
 }
@@ -200,4 +187,3 @@ export default {
   }
 }
 </style>
->>>>>>> 9889f2e7b796c7ef790f2261517e701a8c2aee53
