@@ -6,12 +6,12 @@
       </div>
 
       <div class="contentBx">
-        <p>Course Name Here</p>
-        <h1>Video Title Here</h1>
+        <p>{{CourseName}}</p>
+        <h1>{{Title}}</h1>
       </div>
       <div class="like">
         <i class="far fa-heart"></i>
-        <p>10 Likes</p>
+        <p>{{likes}} Likes</p>
       </div>
       <input type="button" class="button" value="let's see" />
     </div>
@@ -21,6 +21,12 @@
 <script>
 export default {
   name: "VideoCard",
+  props:
+  {
+     VideoData:{
+       type: Object,
+     }
+  }   
 };
 </script>
 

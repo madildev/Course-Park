@@ -25,38 +25,12 @@
 
     <div class="section2">
       <router-link to="/videos">
-        <div class="content">
+        <div class="content" v-for="(department,index) in departments" :key="index">
           <div class="card1">
-            <div class="imgBx"><img src="../assets/images/Computer.jpg" /></div>
+            <div class="imgBx"><img :src="department.img" /></div>
             <div class="icon-name">
-              <div class="icon"><i class="fas fa-laptop-code"></i></div>
-              <div class="depName">Computer Science Dept.</div>
-            </div>
-          </div>
-        </div>
-      </router-link>
-
-      <router-link to="/videos">
-        <div class="content">
-          <div class="card2">
-            <div class="imgBx"><img src="../assets/images/Electric.jpg" /></div>
-            <div class="icon-name">
-              <div class="icon"><i class="fas fa-bolt"></i></div>
-              <div class="depName">Electrical Department</div>
-            </div>
-          </div>
-        </div>
-      </router-link>
-
-      <router-link to="/videos">
-        <div class="content">
-          <div class="card3">
-            <div class="imgBx">
-              <img src="../assets/images/Mechanical.jpg" />
-            </div>
-            <div class="icon-name">
-              <div class="icon"><i class="fas fa-cogs"></i></div>
-              <div class="depName">Mechanical Department</div>
+              <div class="icon"><i :class="department.icon"></i></div>
+              <div class="depName">{{department.name}}</div>
             </div>
           </div>
         </div>
@@ -75,7 +49,26 @@
 export default {
   name: "learning",
   data() {
-    return {};
+    return {
+      departments:[
+        {
+          name: "Computer Science Dept.",
+          img: require("../assets/images/Computer.jpg"),
+          icon: "fas fa-laptop-code"
+        },
+        {
+          name: "Electrical Department",
+          icon: "fas fa-bolt",
+          img: require("../assets/images/Electric.jpg")
+        },
+        {
+          name: "Mechanical Department",
+          icon: "fas fa-cogs",
+          img: require("../assets/images/Mechanical.jpg")
+        },
+        
+      ]
+    };
   },
 };
 </script>
@@ -138,7 +131,6 @@ export default {
   display: inline-block;
   margin: 0 auto;
   width: 100%;
-  height: 100 vh;
   position: relative;
   padding: 50px 0 50px 0;
 }
@@ -173,6 +165,7 @@ export default {
   border: none;
   overflow: hidden;
   background: rgb(27, 32, 51);
+  cursor: pointer;
 }
 
 .section2 .content .card1 .imgBx img {

@@ -11,7 +11,8 @@ export default new Vuex.Store({
     CurrentUser:{},
     messages:[],
     departments: [],
-    courses: []
+    courses: [],
+    videos: []
   },
   
   mutations: {
@@ -30,6 +31,9 @@ export default new Vuex.Store({
     },
     setDepartments(state,departments){  //This will update the departments list
         state.departments = departments;
+    },
+    setVideos(state,videos){
+      state.videos = videos;
     }
 
   },
@@ -87,6 +91,15 @@ export default new Vuex.Store({
         console.log(context.state.departments);
       })
     },
+    GetVideos(context)
+    {
+      axios.get("http://localhost:3000/videos",{
+
+      }).then(res=>{
+         context.commit('setVideos',res.data);
+         console.log(context.state.videos);
+      })
+    }
 
   },
   

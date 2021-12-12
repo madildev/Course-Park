@@ -10,7 +10,7 @@
     <div class="section2">Course Videos</div>
 
     <div class="card-area">
-       <VideoCard></VideoCard>
+      <VideoCard></VideoCard>
     </div>
   </section>
 </template>
@@ -22,10 +22,17 @@ export default {
   data() {
     return {};
   },
-  components:
-  {
-     VideoCard
-  }
+  components: {
+    VideoCard,
+  },
+  computed: {
+    videos() {
+      return this.$store.state.videos;
+    },
+  },
+  mounted() {
+    this.$store.dispatch("GetVideos");
+  },
 };
 </script>
 
@@ -91,5 +98,4 @@ export default {
   text-decoration-style: 2px solid;
   text-decoration-color: #383838;
 }
-
 </style>
