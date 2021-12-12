@@ -86,9 +86,7 @@ function getFieldName(input){
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     checkRequired([name,email,password,passwordConfirm]);
-    checkLength(name,3,20);
     checkLength(password,8,25);
-    checkLength(passwordConfirm,8,25);
     passwordMatch(password,passwordConfirm);
 })
 

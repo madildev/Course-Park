@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+:root {
+    --highlight: #5c5c5c;
+    --dark: #39383d;
+}
+
 html,
 body {
     width: 100%;
@@ -46,9 +51,10 @@ body {
     position: absolute;
     font-size: 50px;
     color: rgb(255, 255, 255);
-    top: 50%;
+    top: 20%;
     margin: 0;
     left: 50%;
+    font-family: poppins;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
@@ -66,7 +72,7 @@ body {
 
 .section1 .imgTop img {
     width: 100%;
-    margin-left: -280px;
+    margin-left: -200px;
     opacity: 0.2;
     filter: hue-rotate(45deg);
     object-fit: cover;
@@ -80,7 +86,7 @@ body {
 .container {
     margin: 0 auto;
     padding: 4rem;
-    width: 48rem;
+    width: 70rem;
     position: absolute;
     top: 220px;
 }
@@ -90,6 +96,19 @@ h3 {
     color: #373d51;
     padding: 1.3rem;
     margin: 0;
+}
+
+.fas {
+    margin: 0 auto;
+    position: absolute;
+    left: 98%;
+}
+
+tr td {
+    padding-top: 6px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 40px;
 }
 
 .accordion a {
@@ -114,21 +133,20 @@ h3 {
 .accordion a:hover,
 .accordion a:hover::after {
     cursor: pointer;
-    color: #ff5353;
+    color: var(--dark)
 }
 
 .accordion a:hover::after {
-    border: 1px solid #ff5353;
+    border: 1px solid var(--highlight);
 }
 
 .accordion a.active {
-    color: #ff5353;
-    border-bottom: 1px solid #ff5353;
+    color: var(--highlight);
+    border-bottom: 1.5px solid var(--highlight);
 }
 
 .accordion a::after {
     font-family: sans-serif, Arial, Helvetica;
-    content: '\f218';
     position: absolute;
     float: right;
     right: 1rem;
@@ -146,16 +164,15 @@ h3 {
 
 .accordion a.active::after {
     font-family: sans-serif, Arial, Helvetica;
-    content: '\f209';
-    color: #ff5353;
-    border: 1px solid #ff5353;
+    color: var(--highlight);
+    border: 1px solid var(--highlight);
 }
 
 .accordion .content {
     opacity: 0;
     padding: 0 1rem;
     max-height: 0;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--highlight);
     overflow: hidden;
     clear: both;
     -webkit-transition: all 0.2s ease 0.15s;
@@ -169,6 +186,7 @@ h3 {
 }
 
 .accordion .content.active {
+    padding: 12px;
     opacity: 1;
     max-height: 100%;
     -webkit-transition: all 0.15s ease-out 0.1s;

@@ -1,4 +1,7 @@
 module.exports = {
     
-    lintOnSave: false
+    lintOnSave: false,
+    devServer:{
+        proxy: "http://localhost:3000"
+    }
 }

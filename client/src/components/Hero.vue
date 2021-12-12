@@ -10,7 +10,7 @@
         </div>
 
         <div class="welcome-text" v-if="isLogin">
-          <p>Welcome Muhammad Adil</p>
+          <p>Welcome {{username}}</p>
         </div>        
 
         <div class="btn" v-if="!(isLogin)">
@@ -146,7 +146,11 @@ export default {
   computed:{
     isLogin() {
       return this.$store.state.isLogin;
+    },
+    username(){
+      return this.$store.state.CurrentUser.username;
     }
+
   }
 };
 </script>

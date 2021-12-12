@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 <template>
   <div id="app">
      <router-view />
@@ -5,13 +6,18 @@
 </template>
 
 <script>
-
 export default {
   name: "app",
+  mounted(){
+    this.$store.dispatch('GetCourses');
+    this.$store.dispatch('GetDepartments');
+  }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
   padding:0;
   margin:0;

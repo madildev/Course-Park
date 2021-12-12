@@ -1,10 +1,23 @@
 /* eslint-disable */
 <template>
   <div class="chat">
-    <!-- This is the pop to join the group chat-->
+
+    <div class="chat-header" v-if="joined">
+        <div class="grp-name">
+
+        </div>
+        <div class="options">
+
+        </div>
+    <div>
+        
+      </div>
+
+    </div>
+   
+   <!-- This is the pop to join the group chat-->
 
     <div v-if="!joined" class="pop-up">
-      <i class="fas fa-times"></i>
       <h2>Welcome to the Chat Group</h2>
       <ul>
         <li>This group is for the Queries</li>
@@ -15,11 +28,10 @@
 
     <!-- This is where the messgages will show-->
 
-    <div v-if="joined">
+    <div v-if="joined" class="messages-box">
       <message
-        class="chat-messages"
-        v-for="txt in messages"
-        :key="txt"
+        v-for="(txt,index) in messages"
+        :key="index"
         :chat="txt"
       ></message>
     </div>
@@ -30,7 +42,7 @@
         <i class="far fa-grin-alt"></i>
       </div>
       <div class="text-area">
-        <form action="">
+        <form @submit.prevent="event.default">
           <input type="text" name="text" id="text" v-model="text" />
         </form>
       </div>
@@ -38,6 +50,7 @@
         <button @click="sendMessage">Send</button>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -52,22 +65,28 @@ export default {
   },
   data() {
        return{
-            joined: false,
-            currentUser: "",
+            currentUser: "madildev",
             text: "",
             messages: [],
         }
     },
+    computed:{
+      joined(){
+        return this.$store.state.joined;
+      }
+    },
     methods: {
     join() {
-      this.joined = true;
+      this.$store.dispatch("JoinedChat");
       this.socketInstance = io("http://localhost:3000");
+      
       this.socketInstance.on(
         "message:received", (data) => {
           this.messages = this.messages.concat(data);
         }
       )
     },
+
     sendMessage() {
       this.addMessage();
       this.text = "";
@@ -76,7 +95,7 @@ export default {
       const message = {
         id: new Date().getTime(),
         text: this.text,
-        user: this.currentUser,
+        username: this.currentUser,
       };
       this.messages = this.messages.concat(message);
       this.socketInstance.emit('message', message);
@@ -88,10 +107,41 @@ export default {
   
 </script>
 
-<style>
-.chat {
-  height: 100vh;
+<style scoped>
+.chat{
+   overflow: hidden;
+
 }
+.chat-header{
+  height: 40px;
+  border-bottom: 1px solid black;
+  position: fixed;
+
+}
+
+.pop-up{
+ position: absolute;
+ text-align: center;
+ padding: 20px 20px;
+ margin: 10px 0;
+ z-index: 10;
+ width: 30%;
+ line-height: 50px;
+ border: 1px solid black;
+ transform: translate(50%,50%);
+ background-color: var(--light);
+}
+.pop-up li{
+  list-style: none;
+}
+.pop-up button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+}
+
 .message-area {
   width: 100%;
   position: absolute;
@@ -100,10 +150,13 @@ export default {
   padding: 20px 0;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--dark);
+  color: white;
 }
 .message-area .emoji-area {
   width: 10%;
   text-align: center;
+  cursor: pointer;
 }
 .message-area .text-area {
   width: 80%;
@@ -124,4 +177,9 @@ export default {
   border: none;
   cursor: pointer;
 }
+.messages-box {
+  overflow: auto;
+  height: 70vh;
+}
+
 </style>
