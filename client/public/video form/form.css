@@ -92,6 +92,49 @@ form .form-row .textarea {
     background: #ffffff;
 }
 
+.selector i {
+    float: right;
+    color: #f87102;
+    margin-right: 550px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.selector i:hover {
+    color: red;
+    transform: rotate(-180deg);
+    transition: 0.3s ease-in-out;
+}
+
+.selector:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-list {
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    background-color: #ff7b00;
+    top: 110%;
+    position: absolute;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibilty 0.2s linear;
+}
+
+.dropdown-list a {
+    padding: 1rem;
+    font-size: 15px;
+    color: #ffffff;
+    z-index: 1;
+    display: block;
+    padding: 5px 16px;
+}
+
+.dropdown-list a:hover {
+    color: #fcce00;
+}
+
 .input-data .underline {
     position: absolute;
     bottom: 0;
@@ -146,6 +189,7 @@ form .form-row .textarea {
     margin-left: 450px;
     margin-top: -15px;
     cursor: pointer;
+    font-weight: 400;
 }
 
 .submit-btn .input-data {
