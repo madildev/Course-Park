@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(115deg, #494949 10%, #797777 90%);
+}
+
+.container {
+    background: #ffffff;
+    width: 800px;
+    max-width: 800px;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+.container .text {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    background: -webkit-linear-gradient(right, #FFCC00, #f78604, #FFCC00, #f78604);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container form {
+    padding: 25px 0 0 0 0;
+}
+
+.container form .form-row {
+    display: flex;
+    margin: 28px 0;
+}
+
+.file-btn {
+    margin-left: 600;
+}
+
+.file-btn input[type="file"] {
+    display: none;
+    cursor: pointer;
+}
+
+.file-btn label {
+    color: white;
+    height: 50px;
+    width: 200px;
+    background-color: #ff7b00;
+    position: absolute;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    margin-left: 450px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+form .form-row .data {
+    width: 100%;
+    height: 40px;
+    margin: 0 18px;
+    position: relative;
+}
+
+form .form-row .textarea {
+    height: 70px;
+}
+
+.submit-btn .data {
+    height: 45px !important;
+    width: 25% !important;
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn .data .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    transition: all 0.3s;
+    background: -webkit-linear-gradient(right, #FFCC00, #f87102, #FFCC00, #f87102);
+}
+
+.submit-btn .data:hover .inner {
+    left: 0;
+}
+
+.submit-btn .data input {
+    position: relative;
+    z-index: 2;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
